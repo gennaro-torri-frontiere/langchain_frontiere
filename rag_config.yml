@@ -42,3 +42,7 @@ simple_rag:
     level: "INFO"
     log_to_file: true
     log_file_path: "./logs/app.log"
+
+
+  rag_2:
+  
