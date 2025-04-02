@@ -1,0 +1,37 @@
+# docker-compose --file components/docker-compose.yml --env-file ./components/.env up
+# use --remove-orphans to remove containers that are not defined in the docker-compose.yml file
+version: '3.8'
+
+services:
+
+  langchain_rag:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: langchain_rag
+    # environment:
+    # ports:
+    #   - ${CHATBOT_APP_PORT}:${CHATBOT_APP_PORT}
+    # volumes:
+    #   - ./chatbot:/chatbot
+    # command: python chatbot 
+    networks:
+     - app_network
+
+  chroma_db:
+    image: chromadb/chroma:0.6.4.dev411
+    container_name: chroma_db
+    ports:
+      - ${DB_PORT}:${DB_PORT}
+    volumes:
+      - chroma_data:/data
+    networks:
+      - app_network
+
+volumes:
+  chroma_data:
+    
+
+networks:
+  app_network:
+    driver: bridge

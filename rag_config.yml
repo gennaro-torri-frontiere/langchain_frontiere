@@ -1,0 +1,44 @@
+# Configuration file for a class factory to instantiate LangChain classes for a RAG application
+
+simple_rag:
+  version: "1.0"
+  # Language model configuration
+  language_model:
+    type: "${{ AI_TYPE }}" # Options: OpenAI, HuggingFace, etc.
+    model_name: "${{ AI_MODEL }}"
+    temperature: 0.7
+    max_tokens: 1500
+    api_key: "${{ OPENAI_API_KEY }}"
+
+  # Vector store configuration
+  vector_store:
+    type: "${{ VECTORSTORE_MODEL}}" 
+    index_path: "${{ VECTORSTORE_PERSIST_DIRECTORY}}"
+    embedding_model:
+      type: "${{ EMBEDDER }}"
+      model_name: "${{ EMBEDDER_MODEL }}"
+
+  # Retriever configuration
+  retriever:
+    type: "${{ RETRIEVER }}"
+    search_type: "${{ RETRIEVER_SEARCH_TYPE }}" # Options: Dense, Sparse
+    search_kwargs:
+      k: 5
+
+  # Document loader configuration
+  document_loader:
+    type: "${{ LOADER }}"
+    path: "${{ PATH_DOCS }}"
+    file_types: ["txt", "pdf"]
+
+  # Text splitter configuration
+  text_splitter:
+    type: "${{ SPLITTER }}"
+    chunk_size: 1000
+    chunk_overlap: 200
+
+  # Logging and debugging
+  logging:
+    level: "INFO"
+    log_to_file: true
+    log_file_path: "./logs/app.log"
