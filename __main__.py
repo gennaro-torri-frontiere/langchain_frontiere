@@ -1,3 +1,4 @@
+import os
 import uvicorn
 from fastapi import FastAPI
 
@@ -8,4 +9,7 @@ def read_root():
     return {"message": "Hello, World!"}
 
 if __name__ == "__main__":
-    uvicorn.run("langchain_frontiere.__main__:app", host="127.0.0.1", port=8000, reload=True)
+    host = "0.0.0.0"
+    port = int(os.environ.get("APP_PORT"))
+    # logger.info(f"Starting Service Image retriever {host}:{port}")
+    uvicorn.run(app, host=host, port=port)

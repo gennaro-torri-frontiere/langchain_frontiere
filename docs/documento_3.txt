@@ -1,0 +1,47 @@
+01/11/2024 - Project kickoff. Site preparation and safety measures implemented.
+02/11/2024 - Land survey and site measurements conducted.
+03/11/2024 - DAY OFF: Heavy rainfall, work halted.
+04/11/2024 - Excavation for foundation begins.
+05/11/2024 - Continued excavation and soil stabilization.
+06/11/2024 - DAY OFF: Machinery breakdown, awaiting repairs.
+07/11/2024 - Machinery repaired, excavation resumes.
+08/11/2024 - Installation of formwork for foundation.
+09/11/2024 - Concrete pouring for foundation.
+10/11/2024 - DAY OFF: Concrete curing period.
+11/11/2024 - Inspection of foundation stability.
+12/11/2024 - Erection of load-bearing columns and beams.
+13/11/2024 - DAY OFF: Material supply delay.
+14/11/2024 - Materials delivered, structural assembly continues.
+15/11/2024 - Further progress on framework.
+16/11/2024 - Structural alignment and quality control.
+17/11/2024 - DAY OFF: Unfavorable weather conditions.
+18/11/2024 - Bricklaying for external walls begins.
+19/11/2024 - Continued masonry work.
+20/11/2024 - DAY OFF: Workers' strike.
+21/11/2024 - Strike resolved, work resumes.
+22/11/2024 - Installation of wall insulation.
+23/11/2024 - Preparations for roofing.
+24/11/2024 - DAY OFF: Strong winds, work postponed.
+25/11/2024 - Roof trusses installed, roofing work begins.
+26/11/2024 - Roofing work progresses.
+27/11/2024 - DAY OFF: Delivery issues with roofing materials.
+28/11/2024 - Materials received, roofing continues.
+29/11/2024 - Completion of roof structure.
+30/11/2024 - Preparation for window and door installation.
+01/12/2024 - Window and door installation begins.
+02/12/2024 - DAY OFF: Extreme cold, work suspended.
+03/12/2024 - Insulation and sealing of windows and doors.
+04/12/2024 - Electrical and plumbing systems installation starts.
+05/12/2024 - Continued work on internal systems.
+06/12/2024 - DAY OFF: Power outage on site.
+07/12/2024 - Power restored, work resumes.
+08/12/2024 - Wall cladding and flooring installation begins.
+09/12/2024 - Further progress on interior finishing.
+10/12/2024 - DAY OFF: Delivery problems with materials.
+11/12/2024 - Materials delivered, interior detailing starts.
+12/12/2024 - Painting and finishing work begins.
+13/12/2024 - DAY OFF: Snowstorm, work halted.
+14/12/2024 - Finalizing interior details.
+15/12/2024 - Final inspection and quality check before completion.
+
+

@@ -1,0 +1,26 @@
+01/02/2025 - Inizio lavori di scavo per le fondamenta. Preparazione dell'area di cantiere e posizionamento delle attrezzature.
+02/02/2025 - Continuazione scavi e verifica conformità del terreno con i geologi.
+03/02/2025 - Installazione casseforme per getto delle fondamenta.
+04/02/2025 - GIORNO DI FERMO: Maltempo, impossibile lavorare sul cantiere.
+05/02/2025 - Getto del cemento per le fondamenta.
+06/02/2025 - Controllo e livellamento del cemento dopo il getto.
+07/02/2025 - GIORNO DI FERMO: Ritardi nella fornitura di materiali.
+08/02/2025 - Arrivo materiali, preparazione per costruzione struttura portante.
+09/02/2025 - Montaggio struttura portante.
+10/02/2025 - Installazione pilastri e verifica delle misure.
+11/02/2025 - GIORNO DI FERMO: Sciopero operai.
+12/02/2025 - Ripresa lavori, completamento montaggio struttura.
+13/02/2025 - Posa del primo solaio e fissaggio elementi strutturali.
+14/02/2025 - Getto del cemento per il solaio.
+15/02/2025 - GIORNO DI FERMO: Cemento non ancora asciutto, attesa necessaria.
+16/02/2025 - Controllo qualità e stabilità del solaio.
+17/02/2025 - Preparazione per la realizzazione dei muri perimetrali.
+18/02/2025 - Inizio posa dei blocchi per i muri.
+19/02/2025 - Continuazione posa murature.
+20/02/2025 - GIORNO DI FERMO: Problema tecnico con le impalcature.
+21/02/2025 - Ripristino impalcature e ripresa lavori su murature.
+22/02/2025 - Completamento murature primo livello.
+23/02/2025 - Verifica allineamenti e finiture delle murature.
+24/02/2025 - Inizio predisposizione impianti elettrici e idraulici.
+25/02/2025 - Proseguimento installazione impianti interni.
+

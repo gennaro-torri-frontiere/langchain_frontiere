@@ -1,0 +1,45 @@
+01/01/2025 - Uppstart av byggprojektet. Förberedelse av arbetsområdet och säkerhetsåtgärder.
+02/01/2025 - Markundersökning och inmätning av byggplatsen.
+03/01/2025 - VILODAG: Tungt snöfall, arbete omöjligt.
+04/01/2025 - Grävarbeten för grundläggning påbörjas.
+05/01/2025 - Fortsatt grävarbete och markstabilisering.
+06/01/2025 - VILODAG: Maskinhaveri, väntan på reparation.
+07/01/2025 - Reparation av maskiner och återupptagande av grävarbete.
+08/01/2025 - Formverk installeras för grundläggning.
+09/01/2025 - Betonggjutning av grunden.
+10/01/2025 - VILODAG: Betongen måste torka.
+11/01/2025 - Kontroll av grundens hållfasthet.
+12/01/2025 - Montering av bärande pelare och bjälklag.
+13/01/2025 - VILODAG: Brist på material, leverans försenad.
+14/01/2025 - Material levererat, återupptagande av montering.
+15/01/2025 - Fortsatt byggnation av stomme.
+16/01/2025 - Fästning av strukturella element och kvalitetskontroll.
+17/01/2025 - VILODAG: Ogynnsamma väderförhållanden.
+18/01/2025 - Murverk påbörjas för ytterväggar.
+19/01/2025 - Fortsatt uppförande av murverk.
+20/01/2025 - VILODAG: Arbetarstrejk.
+21/01/2025 - Strejken avslutad, återgång till arbete.
+22/01/2025 - Installation av isolering i väggarna.
+23/01/2025 - Förberedelse för takläggning.
+24/01/2025 - VILODAG: Storm, arbete inställt.
+25/01/2025 - Takstolar monteras och takläggning påbörjas.
+26/01/2025 - Fortsatt takarbete.
+27/01/2025 - VILODAG: Leveransproblem med takmaterial.
+28/01/2025 - Material levererat, takläggning fortsätter.
+29/01/2025 - Färdigställande av takstruktur.
+30/01/2025 - Förberedelse för fönster- och dörrinstallation.
+31/01/2025 - Installation av fönster och dörrar påbörjas.
+01/02/2025 - VILODAG: Extrem kyla, arbete pausat.
+02/02/2025 - Isolering och tätning av fönster och dörrar.
+03/02/2025 - Installation av el- och VVS-system.
+04/02/2025 - Fortsatt arbete med interna system.
+05/02/2025 - VILODAG: Strömavbrott på byggplatsen.
+06/02/2025 - Ström återställd, arbete återupptas.
+07/02/2025 - Väggbeklädnad och golvläggning inleds.
+08/02/2025 - Fortsatt arbete med inredning och ytskikt.
+09/02/2025 - VILODAG: Problem med materialleverans.
+10/02/2025 - Leverans av material, installation av inomhusdetaljer.
+11/02/2025 - Målning och finish påbörjas.
+12/02/2025 - VILODAG: Kraftigt snöfall, arbete stoppat.
+13/02/2025 - Slutförande av interiöra detaljer.
+14/02/2025 - Slutkontroll och kvalitetsgenomgång inför färdigställande.

@@ -9,12 +9,13 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: langchain_rag
-    # environment:
-    # ports:
-    #   - ${CHATBOT_APP_PORT}:${CHATBOT_APP_PORT}
+    environment:
+      APP_PORT: ${APP_PORT}
+    ports:
+      - ${APP_PORT}:${APP_PORT}
     volumes:
       - .:/app
-    command: python chatbot 
+    command: python . 
     networks:
      - app_network
 
@@ -24,13 +25,10 @@ services:
     ports:
       - ${CHROMA_PORT}:${CHROMA_PORT}
     volumes:
-      - chroma_data:/data
+      - ./chroma_data:/data
     networks:
       - app_network
 
-volumes:
-  chroma_data:
-    
 
 networks:
   app_network:

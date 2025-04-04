@@ -3,49 +3,53 @@
 
 simple_rag:
   version: "1.0"
-  # Language model configuration
-  language_model:
-    name: simple_openai
-    class: ChatOpenAI
-    model_name: gpt-3.5-turbo
-    temperature: 0.7
-    max_tokens: 1500
-    api_key: "${{ OPENAI_API_KEY }}"
-
-  # Vector store configuration
-  vector_store:
-    name: simple_chroma
-    class: Chroma
-    client:
-      collection_name: simple_rag_collection
-      host: ${{ CHROMA_HOST }}
-      port: ${{ CHROMA_PORT }}
-
-  # embedding configuration
-  embedding:
-    name: bge_small
-    class: HuggingFaceBgeEmbeddings
-    model_name: BAAI/bge-small-en
-
-  # Retriever configuration
-  retriever:
-    name: simple_chroma
-    class: Chroma
-    retriever_params: 
-      search_type: similarity
-      search_kwargs:
-        k: 5
-
   # Document loader configuration
   document_loader:
     name: document_loader
     class: DirectoryLoader
-    path: ./docs
-    extensions: ["txt", "pdf"]
+    params:
+      path: ./docs
+      # extensions: .*\.(txt|pdf)
 
   # Text splitter configuration
   text_splitter:
     name: recursive_text_splitter
     class: RecursiveCharacterTextSplitter
-    chunk_size: 1000
-    chunk_overlap: 200
+    params:
+      chunk_size: 1000
+      chunk_overlap: 200
+  
+  # embedding configuration
+  embedding:
+    name: bge_small
+    class: HuggingFaceBgeEmbeddings
+    params:
+      model_name: BAAI/bge-small-en
+
+  # Vector store configuration
+  vector_store:
+    name: simple_chroma
+    class: Chroma
+    collection_name: simple_rag_collection
+    client:
+      host: ${{ CHROMA_HOST }}
+      port: ${{ CHROMA_PORT }}
+
+  # Retriever configuration
+  retriever:
+    name: simple_chroma
+    class: Chroma
+    params: 
+      search_type: similarity
+      search_kwargs:
+        k: 5
+
+# Language model configuration
+  language_model:
+    name: simple_openai
+    class: ChatOpenAI
+    params:
+      model: gpt-3.5-turbo
+      temperature: 0.7
+      max_tokens: 1500
+      api_key: "${{ OPENAI_API_KEY }}"
