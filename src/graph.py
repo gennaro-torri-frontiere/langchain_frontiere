@@ -5,7 +5,13 @@ from state import State
 class Graph():
 
     def __init__(self,vector_store, Model):
-
+        """
+        Initialize the Graph class with a vector store and a model.
+        Input:
+            vector_store: The vector store to search for relevant documents.
+            Model: The model to generate answers.
+        """
+        
         self.template =(
         "You are a chatbot assistant specialized in construction site timelines. "
         "Your task is to answer questions about the chronology of work based strictly on the provided context. "
