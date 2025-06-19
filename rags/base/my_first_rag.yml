@@ -1,0 +1,31 @@
+# Configuration file for a Based RAG (Retrieval-Augmented Generation) system
+
+name: my_first_rag
+type: base
+
+components:
+  embeddings:
+    name: bge_small
+    parmas:
+  chat_models:
+    name: gpt35_turbo
+    params:
+  vector_stores:
+    name: chroma
+    params:
+      collection_name: my_first_rag_collection
+      host_client: ${{ CHROMA_HOST }}
+      port_client: ${{ CHROMA_PORT }}
+  loader:
+    name: document_loader
+    params:
+      path: ./docs
+  text_splitter:
+    name: recursive_character_text_splitter
+    params:
+      chunk_size: 1000
+      chunk_overlap: 200
+
+retriever_parmas:
+  search_type: "similarity" 
+  top_k: 5

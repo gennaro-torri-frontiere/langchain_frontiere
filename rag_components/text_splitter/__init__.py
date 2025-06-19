@@ -1,0 +1,1 @@
+from rag_components.text_splitter import text_splitter

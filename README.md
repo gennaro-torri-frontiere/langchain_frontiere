@@ -1,37 +1,19 @@
-# Trice_Demo
+# Documentation
 
-## Panoramica
-Trice_Demo è un progetto che dimostra l'integrazione di un chatbot e un grounder per la definizione di un LLM-RAG come Q&A per Intera, un azienda di costruzione.
+## Overview
+This repository is designed to provide an engineered framework for working with LangChain, enabling users to build various types of Retrieval-Augmented Generation (RAG) systems by simply configuring a file. The goal is to simplify the process of creating and customizing RAG pipelines, making it accessible and efficient for developers.
 
-## Chatbot
-Il chatbot è progettato per interagire con gli utenti, fornendo risposte basate su regole predefinite o algoritmi di intelligenza artificiale. Può gestire vari tipi di query e fornire informazioni o assistenza pertinenti.
+## Features
+- **Modular Design**: The repository is structured to allow easy integration and customization of LangChain components.
+- **Configuration-Driven**: Users can define the behavior and structure of their RAG system through a single configuration file, reducing the need for extensive coding.
+- **Support for Multiple RAG Types**: The framework supports the creation of different RAG architectures, catering to diverse use cases and requirements.
+- **Scalability and Flexibility**: Designed to handle various data sources and retrieval mechanisms, ensuring adaptability to different scenarios.
 
-## Grounder
-Il grounder è responsabile di garantire che le risposte del chatbot siano accurate e contestualmente appropriate. Il suo funzionamento si basa sulla fase iniziale di un sistema LLM-RAG (Retrieval-Augmented Generation), che comprende:
-- Caricamento dei documenti
-- Divisione in chunk tramite uno splitter
-- Creazione di una funzione di embedding
-- Creazione del vector store utilizzando i chunk e la funzione di embedding
+## Use Cases RAG
+- [Simple] Basic RAG: 
 
-Il codice del grounder è strutturato secondo due pattern:
-- **Strategy Pattern**: per definire quale classe di grounder utilizzare.
-- **Factory Pattern**: per istanziare le risorse necessarie per il grounder.
+        input query --> retrieve context
+        context + system prompt + LLM --> output answer
 
-Le classi principali coinvolte sono:
-- **GrounderStrategy**: definisce la strategia di grounding da adottare.
-- **Loader**: gestisce il caricamento dei documenti.
-- **Splitter**: suddivide i documenti in chunk.
-- **Embedder**: genera le rappresentazioni vettoriali dei chunk.
-- **VectorStore**: archivia e gestisce i chunk vettorializzati.
-
-## Caratteristiche
-- Chatbot interattivo
-- Grounding contestuale delle risposte
-- Informazioni accurate e affidabili
-
-## Utilizzo
-Per utilizzare Trice_Demo, segui questi passaggi:
-1. Clona il repository.
-2. Installa le dipendenze necessarie.
-3. Esegui l'applicazione.
-
+## Getting Started
+TODO
