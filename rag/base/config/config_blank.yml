@@ -1,16 +1,13 @@
 # Configuration file for a Based RAG (Retrieval-Augmented Generation) system
 
-name: "<name_of_your_rag>"
-type: base
-
 components:
   embeddings:
     name: 
-    parmas:
+    params:
   chat_models:
     name: 
     params:
-  vector_stores:
+  vectore_store:
     name: 
     params:
   loader:
@@ -20,4 +17,8 @@ components:
     name: 
     params:
 
-retriever_parmas:
+retriever_params:
+
+preproces:
+
+system_prompt_file:

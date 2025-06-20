@@ -13,9 +13,9 @@ def gpt35_turbo(temperature: float = 0.7, max_tokens: int = 1500) -> BaseChatMod
     class: OpenAIChat
     Initializes a chat model using OpenAI's API with specified parameters.
     """
-    from langchain_openai import OpenAIChat
-    return OpenAIChat(
-        model_name="gpt-3.5-turbo",
+    from langchain_openai.chat_models.base import ChatOpenAI
+    return ChatOpenAI(
+        model="gpt-3.5-turbo",
         temperature=temperature,
         max_tokens=max_tokens
     )

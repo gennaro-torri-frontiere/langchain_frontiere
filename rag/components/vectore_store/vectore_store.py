@@ -1,6 +1,8 @@
 import inspect
-from rag_components.embeddings import embeddings
+from rag.components.embeddings import embeddings
 from langchain.vectorstores import VectorStore
+from langchain_core.embeddings import Embeddings
+
 
 def list_implementations() -> list:
     return [
@@ -8,7 +10,7 @@ def list_implementations() -> list:
         if inspect.isfunction(func) and name != "list_implementations"
     ]
 
-def chroma(collection_name: str, host_client: str, port_client: str, embeddings_name: str, embeddings_parmas: dict = {}) -> VectorStore:
+def chroma(collection_name: str, host_client: str, port_client: str, embeddings_name: str, embeddings_params: dict = {}) -> VectorStore:
     """
     class: Chroma
     istanziata con un client HTTP per ChromaDB e una funzione di embedding specificata.
@@ -16,10 +18,10 @@ def chroma(collection_name: str, host_client: str, port_client: str, embeddings_
     import chromadb
     from langchain.vectorstores import Chroma
 
-    if embeddings not in embeddings.list_embeddings().keys():
-        raise ValueError(f"Embedding {embeddings} is not supported. Available embeddings: {embeddings.list_embeddings().keys()}")
+    if embeddings_name not in embeddings.list_implementations():
+        raise ValueError(f"Embedding {embeddings_name} is not supported. Available embeddings: {embeddings.list_implementations()}")
     else:
-        embedding_function = getattr(embeddings, embeddings_name)(**embeddings_parmas)
+        embedding_function = getattr(embeddings, embeddings_name)(**embeddings_params)
 
     return Chroma(
         embedding_function=embedding_function,

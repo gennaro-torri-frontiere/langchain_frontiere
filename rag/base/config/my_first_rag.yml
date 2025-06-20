@@ -1,16 +1,13 @@
 # Configuration file for a Based RAG (Retrieval-Augmented Generation) system
 
-name: my_first_rag
-type: base
-
 components:
   embeddings:
     name: bge_small
-    parmas:
+    params:
   chat_models:
     name: gpt35_turbo
     params:
-  vector_stores:
+  vectore_store:
     name: chroma
     params:
       collection_name: my_first_rag_collection
@@ -26,6 +23,13 @@ components:
       chunk_size: 1000
       chunk_overlap: 200
 
-retriever_parmas:
+retriever_params:
   search_type: "similarity" 
   top_k: 5
+
+preproces:
+  text: 
+    name: "clean"
+    params:
+
+system_prompt_file: rag/base/system_prompts/timeline.txt

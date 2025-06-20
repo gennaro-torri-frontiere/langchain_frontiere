@@ -11,6 +11,9 @@ services:
     container_name: langchain_rag
     environment:
       APP_PORT: ${APP_PORT}
+      CHROMA_HOST: ${CHROMA_HOST}
+      CHROMA_PORT: ${CHROMA_PORT}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
     ports:
       - ${APP_PORT}:${APP_PORT}
     volumes:
