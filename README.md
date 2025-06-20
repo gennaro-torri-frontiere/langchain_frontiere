@@ -10,7 +10,7 @@ This repository is designed to provide an engineered framework for working with 
 - **Scalability and Flexibility**: Designed to handle various data sources and retrieval mechanisms, ensuring adaptability to different scenarios.
 
 ## Use Cases RAG
-- [Simple] Basic RAG: 
+- [Base] Basic RAG doc at [rag.base README](rag.base/README.md) 
 
         input query --> retrieve context
         context + system prompt + LLM --> output answer
