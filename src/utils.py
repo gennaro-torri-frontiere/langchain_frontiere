@@ -1,9 +1,12 @@
 import os
+import importlib
 import yaml
-from dotenv import load_dotenv
 from typing import Tuple
-load_dotenv()
 
+def call_function(module: str, func: str, **params) -> object:
+    '''Import a function from a module and return the function object.'''
+    mod = importlib.import_module(module)
+    return getattr(mod, func)(**params) if params else getattr(mod, func)()
 
 def _expand_env_vars(obj):
     """
@@ -29,26 +32,40 @@ def load_config(yaml_path) -> dict:
         config = yaml.safe_load(file)
     return _expand_env_vars(config)
 
-def nesteddict_2_import(dict_: dict | str, path: str = "", func: str = "") -> Tuple[str, str]:
+def nesteddict_2_import(dict_: dict | str, path: str = "") -> Tuple[str, str, dict]:
     """
     transform a dict like this:
-        {'module': {'submodule1': {"submodule2": "function"}}} --> ("module.submodule1.submodule2", "function")
+    {
+        "module":{
+            "submodule1": {
+                "submodule2": {
+                    "name": "function_name",
+                    "params": {
+                        "param1": "value1",
+                        "param2": "value2"
+                    },
+                }
+            }
+        }
+    }
+    to --> ("module.submodule1.submodule2", "function_name", {"param1": "value1", "param2": "value2"})
     """
     if isinstance(dict_, dict):
-        if len(dict_) != 1:
-            raise ValueError("path dict must have exactly one key or value")
-        else:
+        if len(dict_) == 1:
             key = next(iter(dict_.keys()))
             value = next(iter(dict_.values()))
             return nesteddict_2_import(
                 dict_=value,
                 path=path + "." + key,
-                func=func
             )
-    elif isinstance(dict_, str):
-        return path[1:], dict_ # path[1:] to remove the leading dot
-    
+        elif len(dict_) == 2:
+            if set(dict_.keys()) == {"name", "params"}:
+                return path[1:], dict_["name"], dict_["params"]
+            else:
+                raise ValueError("nesteddict_2_import: dict_ must have exactly two keys: 'name' and 'params'")
+        else:
+            raise ValueError("nesteddict_2_import: dict_ must have exactly one key or two keys: 'name' and 'params'")
     else:
-        raise TypeError("dict_ must be a dict or a str")
+        raise TypeError("nesteddict_2_import: dict_ must be a dict")
 
 

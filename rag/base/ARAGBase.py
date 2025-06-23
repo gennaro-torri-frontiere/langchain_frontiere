@@ -14,6 +14,14 @@ class ARAGBase(ABC):
         pass
 
     @abstractmethod
+    def _check_config(self, config: dict) -> None:
+        """
+        Check the configuration of the RAG system.
+        This method should validate that the configuration matches the expected structure.
+        """
+        pass
+
+    @abstractmethod
     def index(self) -> str:
         """
         create indexes of documents for retrieval.

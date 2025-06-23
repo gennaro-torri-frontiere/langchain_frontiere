@@ -3,33 +3,38 @@
 components:
   embeddings:
     name: bge_small
-    params:
+    module_path: rag.components.embeddings.huggingface
+    params: {}
   chat_models:
     name: gpt35_turbo
-    params:
+    module_path: rag.components.chat_models.openai
+    params: {}
   vectore_store:
-    name: chroma
-    params:
+    name: chroma_client
+    module_path: rag.components.vectore_store.chroma
+    params: 
       collection_name: my_first_rag_collection
       host_client: ${{ CHROMA_HOST }}
       port_client: ${{ CHROMA_PORT }}
   loader:
     name: document_loader
+    module_path: rag.components.loader.directory_loader
     params:
-      path: ./docs
-  text_splitter:
+      path: docs
+  splitter:
     name: recursive_character_text_splitter
+    module_path: rag.components.splitter.text
     params:
       chunk_size: 1000
       chunk_overlap: 200
 
 retriever_params:
-  search_type: "similarity" 
+  search_type: "similarity"
   top_k: 5
 
 preproces:
-  text: 
-    name: "clean"
-    params:
+  name: "clean"
+  module_path: rag.preproces.text
+  params: {}
 
 system_prompt_file: rag/base/system_prompts/timeline.txt

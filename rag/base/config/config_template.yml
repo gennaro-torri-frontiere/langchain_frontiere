@@ -1,0 +1,32 @@
+# Configuration file for a Based RAG (Retrieval-Augmented Generation) system
+
+components:
+  - type: embeddings
+    name: 
+    module_path: 
+    params: {}
+  - type: chat_models
+    name: 
+    module_path: 
+    params: {}
+  - type: vectore_store
+    name: 
+    module_path: 
+    params: {}
+  - type: loader
+    name: 
+    module_path: 
+    params: {}
+  - type: text_splitter
+    name: 
+    module_path: 
+    params: {}
+
+retriever_params:
+
+preproces:
+  - name:
+    module_path:
+    params: {}
+
+system_prompt_file: "path to file .txt"

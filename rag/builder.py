@@ -1,6 +1,3 @@
-from importlib import import_module
-from typing import Callable
-from src.utils import load_config
 from src.logger import get_logger
 
 from rag.base.RAGBase import RAGBase
@@ -26,9 +23,8 @@ class Builder:
         
         if name not in self.rags:
             self.logger.info(f"Creating RAG instance: {name} of type {type}")
-            config: dict = load_config(config_path)
             class_rag = self.types_rag[type] 
-            istance_rag = class_rag(name=name, config=config)
+            istance_rag = class_rag(name=name, config_path=config_path)
             self.rags[name] = istance_rag
         
         self.logger.info(f"Returning RAG instance: {name} of type {type}")
